@@ -23,6 +23,7 @@ services:
       # Make CSVs available to COPY during init (read-only)
       - ./data:/docker-entrypoint-initdb.d/data:ro
       - ./Data/analytics_schema:/data:ro
+      - ./Data:/docker-entrypoint-initdb.d/Data
 
   pgadmin:
     container_name: pgadmin_aca
