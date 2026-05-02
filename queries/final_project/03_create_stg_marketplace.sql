@@ -1,0 +1,43 @@
+DROP TABLE IF EXISTS analytics._stg_marketplace;
+
+CREATE TABLE analytics._stg_marketplace (
+    order_id TEXT,
+    order_item_id INT,
+    customer_id TEXT,
+    customer_unique_id TEXT,
+    customer_zip_code_prefix INT,
+    customer_city TEXT,
+    customer_state TEXT,
+    product_id TEXT,
+    product_category_name TEXT,
+    product_name_lenght NUMERIC,
+    product_description_lenght NUMERIC,
+    product_photos_qty NUMERIC,
+    product_weight_g NUMERIC,
+    product_length_cm NUMERIC,
+    product_height_cm NUMERIC,
+    product_width_cm NUMERIC,
+    seller_id TEXT,
+    seller_city TEXT,
+    seller_state TEXT,
+    seller_zip_code_prefix INT,
+    payment_type TEXT,
+    payment_sequential INT,
+    payment_installments INT,
+    price NUMERIC,
+    freight_value NUMERIC,
+    payment_value NUMERIC,
+    shipping_limit_date TIMESTAMP,
+    order_purchase_timestamp TIMESTAMP,
+    order_approved_at TIMESTAMP,
+    order_delivered_carrier_date TIMESTAMP,
+    order_delivered_customer_date TIMESTAMP,
+    order_estimated_delivery_date TIMESTAMP,
+    day_of_purchase TEXT,
+    month_of_purchase TEXT,
+    year_of_purchase INT,
+    "month/year_of_purchase" TEXT, -- Չակերտներով, քանի որ սիմվոլ կա
+    order_status TEXT,
+    order_unique_id TEXT
+);
+
